@@ -1,0 +1,51 @@
+\chapter{Additional information to Chapter~\ref{chapter:impact-misdignosis-2023}}
+\label{appendix:impact-misdignosis-2023}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Supplementary tables}
+
+
+\begin{table}[h]
+    \centering
+    \caption[Augmented version of the observed $2 \times 2$ contingency table in the presence of the misdiagnosis of ME/CFS cases for a classical case-control association study]{Augmented version of the observed $2 \times 2$ contingency table in the presence of the misdiagnosis of ME/CFS cases for a classical case-control association study. Parameter $\theta_0$ is the probability of the presence of the candidate causal factor shared across healthy controls and apparent (false positive) ME/CFS cases, $\theta_1^*$ is the true probability of the causal factor in the true ME/CFS patients. Misdiagnosis probability is given by the parameter $\gamma$.}
+    \input{chapter/2023-misdiagnosis/tables/taba1-candidate-gene-probabilities}
+    \label{appendix:candidate-gene-probabilities}
+\end{table}
+% Supplementary Table 1
+% Supplementary Table~\ref{appendix:candidate-gene-probabilities}
+
+
+\begin{table}[h]
+    \centering
+    \caption[Augmented version of the observable $2 \times 2$ contingency table in the case-control association study with possible misdiagnosis of ME/CFS cases and misclassification of the true serological status]{Augmented version of the observable $2 \times 2$ contingency table in the case-control association study with possible misdiagnosis of ME/CFS cases and misclassification of the true serological status (seropositive, $S^+$, and seronegative, $S^-$). Parameter $\theta_0$ is the probability of the presence of the candidate causal factor in healthy controls and apparent (false positive) ME/CFS cases, $\theta_1^*$ is the true probability of the causal factor in the true ME/CFS patients. Misdiagnosis probability is modulated by the parameter $\gamma$. The true serological status is dependent on the sensitivity ($\pi_{se}$) and specificity ($\pi_{sp}$) of the serological test.}
+    \resizebox{\textwidth}{!}{\input{chapter/2023-misdiagnosis/tables/taba2-serology-probabilities}}
+    \label{appendix:serology-probabilities}
+\end{table}
+% Supplementary Table 2
+% Supplementary Table~\ref{appendix:serology-probabilities}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Supplementary equations}
+
+We constructed our analysis considering a classical epidemiological scenario where for a single putative risk factor, individuals can be divided into exposed versus non-exposed. This result can be summarised by a $2 \times 2$ contingency table, whose sampling distribution is the product of two independent Binomial distributions, one Binomial distribution per group,
+% 
+\begin{equation}
+    f(x_i | n_i; \theta_i) = \prod_{i = 0,1} \binom{n_i}{x_i} \theta_{i}^{x_i} (1-\theta_i)^{n_i - x_i}\ ,
+    \label{appendix:sample-distribution-01}
+\end{equation}
+% Supplementary Equation (1)
+% Supplementary Equation~(\ref{appendix:sample-distribution-01})
+% 
+where $x_0$ and $x_1$ are the observed frequencies of healthy controls and suspected cases with presence of the candidate causal factor, respectively, $n_0$ and $n_1$ are the corresponding sample sizes of each group, and $\theta_0$ and $\theta_1$ are the probabilities for the presence of the candidate causal factor in healthy controls and suspected cases, respectively.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{equation}
+    \theta_{1}^{*} = \frac{\theta_0 \Delta_T}{1 + \theta_0 \left(\Delta_T - 1\right)}
+    \label{appendix:true-t1}
+\end{equation}
+% Supplementary Equation (2)
+% Supplementary Equation~(\ref{appendix:true-t1})

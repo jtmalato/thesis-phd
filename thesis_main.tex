@@ -1,0 +1,123 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass[12pt,twoside]{book}
+% \usepackage{showframe}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{thesis_packages}
+\input{thesis_var_definitions}
+\input{thesis_preamble}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \pagestyle{plain} Do not uncomment!
+\frontmatter
+\pagenumbering{roman}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{base-start/thesis_frontcover_final}
+% \afterpage{\blankpage}
+\cleardoublepage
+\input{base-start/thesis_facecover_final}
+\cleardoublepage
+\input{base-start/thesis_declaration_final}
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\input{base-start/thesis_dedication}
+\cleardoublepage
+\input{base-start/thesis_acknowledgements}
+\cleardoublepage
+\input{base-start/thesis_abstract}
+\cleardoublepage
+\input{base-start/thesis_resumo}
+\cleardoublepage
+\input{base-start/thesis_articlesincluded}
+\cleardoublepage
+\input{base-start/thesis_articlesnotincluded}
+\cleardoublepage
+% \input{base-start/thesis_abbreviations}
+% \cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\phantomsection
+\begin{singlespacing}
+    % \addcontentsline{toc}{section}{List of Abbreviations}
+    \printglossary[type=\acronymtype,title={List of abbreviations}]
+    \glsaddall
+    \input{base-start/thesis_acronyms}
+\end{singlespacing}
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\microtypesetup{protrusion=false} % disables protrusion locally in the document
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\tableofcontents
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\phantomsection
+\addcontentsline{toc}{section}{List of tables}
+\listoftables
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\phantomsection
+\addcontentsline{toc}{section}{List of figures}
+\listoffigures
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\microtypesetup{protrusion=true} % enables protrusion
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \pagestyle{fancy} Do not uncomment!
+\mainmatter
+\setcounter{page}{1}
+\pagenumbering{arabic}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part[General introduction]{GENERAL INTRODUCTION}
+\label{part:introduction}
+\include{chapter/introduction/text}
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part[Uncertainty and stratification in ME/CFS]{UNCERTAINTY AND\\STRATIFICATION IN ME/CFS}
+\label{part:mecfs}
+\include{chapter/2021-statistical-challenges/text}
+\include{chapter/2022-misdiagnosis-serology/text}
+\include{chapter/2023-misdiagnosis/text}
+\include{chapter/2022-revisiting-igg/text}
+\include{chapter/2023-sym-and-herpesvirus/text}
+\include{chapter/2024-sym-domains/text}
+\include{chapter/2021-ace-ace2/text}
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part[Urgency and the case of SARS-CoV-2 Omicron BA.5 in Portugal]{URGENCY AND\\THE CASE OF SARS-COV-2\\OMICRON BA.5 IN PORTUGAL}
+\label{part:covid}
+\include{chapter/2022-covid19-01/text}
+\include{chapter/2023-covid19-02/text}
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\part[General discussion]{GENERAL DISCUSSION}
+\label{part:discussion}
+\include{chapter/discussion/text}
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\cleardoublepage
+\part[Appendices]{APPENDICES}
+\label{appendix:appendix}
+\appendix
+% add page number prefix according to appendix chapter (optional)
+\renewcommand{\thepage}{\thechapter.\arabic{page}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\include{chapter/2023-misdiagnosis/appendix}
+\cleardoublepage
+\include{chapter/2022-revisiting-igg/appendix}
+\cleardoublepage
+\include{chapter/2023-sym-and-herpesvirus/appendix}
+\cleardoublepage
+\include{chapter/2024-sym-domains/appendix}
+\cleardoublepage
+\include{chapter/2021-ace-ace2/appendix}
+\cleardoublepage
+\include{papers-pdf/text}
+\cleardoublepage
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\end{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

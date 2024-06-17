@@ -1,0 +1,138 @@
+\section{Introduction}
+
+- misdiagnosis (relative)
+    - lack of a consensual case definition \citep{malato2021Statisticalchallenges}
+    - consensual case definition are both difficult find and suboptimal to patien/control discrimination \citep{jason2014ExaminingCase}
+    - more related to a discussion about the different case definitions implemented \citep{brurberg2014CaseDefinitions, lim2020ReviewCase}
+- misdiagnosis (in a strict sense) can result from
+    - random fluctuations in the natural, pathological process of the exclusionary disease (e.g., low-graded or relapsing MS)
+    - limited resources to run the battery of test necessary to exclude all known diseases that could explain fatigue
+    - ambiguity around the exclusionary criteria themselves \citep{jason2023EstablishingConsensus}
+    - given the state of research, this type of misdiagnosis seems inevitably present in ME/CFS studies \citep{nacul2019HowHave}
+    
+- study simulation to
+    - determine statistical power of detecting associations with ME/CFS under misdiagnosis in a strict sense
+    - investigate the impact of imperfect sensitivity/specificity for the presence of a given antibody that could be causing ME/CFS
+
+\section{Statistical methodology}
+
+Definitions
+    - candidate causal factor
+        - genetic factor
+        - occurrence of a given infection
+
+
+\subsection{Formulation of the problem}
+
+- Table 1: Two-way contingency table of a typical case-control study
+
+- We worked assuming an binary output of presence/absent or infected/non-infected
+
+- This work could be expanded to consider
+    - different candidate causal factor probabilities within the ME/CFS patients (assuming that this cohort is composed not only by possible misdiagnosed individuals, but also by different sub-types of the disease)
+
+Assumptions:
+    1. ME/CFS-diagnosed cases are a mix of apparent and genuine patients of the disease
+    2. The causal factor is only associated with genuine ME/CFS patients
+    3. Apparent cases are similar to healthy controls as far as the association with the causal factor is concerned
+    4. The chance of an ME/CFS misdiagnosis is only dependent on the true clinical status of the cases and not on the confounding factors
+    5. The true association is independent of disease duration and disease triggers, among other factors occurring during the disease course
+    6. Healthy controls were not misdiagnosed as such
+    7. The value of the candidate causal factor can be determined perfectly in each individual
+
+- impact of sensitivity/specificity misdiagnosis: the candidate causal factor cannot be determined perfectly in each individual
+    - serological studies that aim to investigate whether the presence of specific antibodies is associated to ME/CFS \citep{ruiz-pablos2021EpsteinBarrVirus} or whether these antibodies can be used for disease diagnosis \citep{sepulveda2022RevisitingIgG}
+
+Assumptions:
+    7. There are only two possible serological outcomes for each individual: seronegative or seropositive
+    8. The sensitivity and specificity of the serological classification are identical for all of the individuals
+
+
+\subsection{Simulation study}
+
+- theta0
+    - genetic association: minor allele frequency of a given SNP in the healthy population
+
+
+\subsection{Application to two ME/CFS studies}
+
+
+\section{Results}
+
+\subsection{Simulation study: impact of ME/CFS misdiagnosis}
+
+Figure 1: Probabilities of detecting an association as a function of the misdiagnosis rate
+
+Table 2: Maximum values of misdiagnosis probability that ensure the minimum power of 80\% to detect a genuine association as a function of theta0 and sample size per group
+    - delta = 10; gamma = 0.53 (n >= 100), irrespective of theta0
+    - delta = 5; gamma = 0.24 (n >= 100), irrespective of theta0
+    - delta > 1.25; gamma < 0.88 (n = 2500, 5000), irrespective of theta0
+    
+    - delta = 1.25, 1.5; gamma = BAD (n = 100), irrespective of theta0
+    - delta = 1.5; gamma = 0.8 (n = 2500, 5000), irrespective of theta0
+    - for a weak association, the chance of finding reproducible results was very low, even under the assumption of a perfect diagnosis!
+    - As consequence, testing "common disease, common variant hypothesis" in ME/CFS is likely to fail in future genetic associations
+
+
+\subsection{Simulation study: impact of ME/CFS misdiagnosis and misclassification on the candidate causal factor}
+
+Figure 2: Probabilities of detecting an association as a function of the misdiagnosis rate considering different combinations of sensitivity and specificity
+
+Table 3: Maximum values of misdiagnosis probability that still ensures a power of rejecting the null hypotheses of at least 80\% for $\Delta_T = 3$ and $\theta_0 = 0.25$
+    - The additional assumption of imperfect classification of the candidate causal factor would make the previously estimated power even worse!
+    - The results for Figure 2 and Table 3 don't even replicate the reality of ME/CFS and a more optimistic scenario with OR=3 had to be simulated instead!
+
+
+\subsection{Application to data from two ME/CFS studies}
+
+Table 4: Reported associations of a candidate gene association study \citep{steiner2020AutoimmunityRelatedRisk}
+    - We could only assume replication of one finding (rs3087243 in \textit{CTLA4}) under misdiagnosis of less than 9\% of the population, otherwise the power decreases below the idealised threshold of 80\%.
+    - For rs2476601 in \textit{PTPN22}, whose association was reported significant in the original study, a misdiagnosis of 10\% of the ME/CFS population returns a power around 50\%, which is essentially the same as flipping a coin for the association.
+
+Table 5: Summary of serological findings from \citet{cliff2019CellularImmune}
+
+
+Figure 3: The relationship between the misdiagnosis probability and the probability of detecting an association estimated from simulated data from two previously published studies
+
+\section{Discussion}
+
+- strong associations with ME/CFS can be detected with reasonable power under a non-negligible misdiagnosis rate
+- however strong associations might not be the case of ME/CFS, giving the difficulty in finding biomarkers \citep{scheibenbogen2017EuropeanME} and a clear genetic signature of the disease \citep{dibble2020GeneticRisk, hajdarevic2022GeneticAssociation, herrera2018GenomeepigenomeInteractions, tanigawa2019ComponentsGenetic}
+- sample sizes larger than 500 individuals per study group are able to compensate for the reduction in power due to misdiagnosis alone
+- larger studies are becoming more common in well-known and highly-funded diseases, such as cancer, cardiovascular diseases \citep{giri2019TransethnicAssociation}, and autoimmune disorders \citep{bjornevik2022LongitudinalAnalysis, internationalmultiplesclerosisgeneticsconsortiumimsgc2013AnalysisImmunerelated}
+- large studies in ME/CFS are being proposed, such as DecodeME [link], but in all, large ME/CFS studies are currently unfeasible due to limited funding and poor societal recognition of the disease \citep{pheby2021LiteratureReview}
+- use of data from biobanks with larger number of biological samples \citep{lacerda2018UKME}
+- conduct multi-centric studies \citep{scheibenbogen2017EuropeanME}
+
+- Healthy controls and ME/CFS can show similar levels of fatigue \citep{cella2010MeasuringFatigue, malato2021Statisticalchallenges}
+- Again, self-reported healthy controls
+    - a thorough clinical assessment should also be performed in putative healthy controls
+
+From a purely mathematical viewpoint, the proposed idea of patient misdiagnosis (in a strict sense) is equivalent to defining two subgroups within the population of ME/CFS suspected cases. This makes our results directly applicable to an alternative study on stratification of patients.
+- genomic data suggests taht ME/CFS might not be one but several diseases under the same umbrella term \citep{kerr2008GeneExpression, zhang2010MicrobialInfections}
+- Extend our study and interpred the different possible degrees of association as different subgroups of ME/CFS patients
+
+- sample size of 500--1000 individuals per study is a minimal requirement to detect mild-to-moderate associations with a high power under the assumption of misdiagnosis (multi-centric studies which require collaboration amongst ME/CFS researchers).
+- under the impossibility to increase cohort sample size, the focus should be on reducing the rate of strict misdiagnosis, i.e., following existing recommendations for research reports on ME/CFS ( reporting the screening laboratory tests and the cut-off values for exclusion \citep{jason2012MinimumData}), and by continued search of alternative diagnoses and co-morbidities \citep{nacul2021EuropeanNetwork}.
+- Study more homogeneous cohorts of patients, where a chance of misdiagnosis is reduced!
+
+
+\section{CONCLUSIONS}
+
+Dfinitions of
+    - misdiagnosis: different case definitions are used by clinicians (relative misdiagnosis)
+    - misclassification: failing the genuine diagnosis of another disease (misdiagnosis in a strict sense)
+
+- estimated the power needed to detect a genuine association between a potential causal factor and ME/CFS
+- Current ME/CFS studies have suboptimal power under the assumption of misdiagnosis
+- This power can be improved by increasing the overall sample size using multi-centric studies, reporting the excluded illnesses and their exclusion criteria, or focusing on a homogeneous cohort of ME/CFS patients with a specific pathological mechanism where the chance of misdiagnosis is reduced
+
+- We worked assuming an binary output of presence/absent or infected/non-infected
+
+
+- This work could be expanded to consider
+    - different candidate causal factor probabilities within the ME/CFS patients (assuming that this cohort is composed not only by possible misdiagnosed individuals, but also by different sub-types of the disease)
+
+- impact of sensitivity/specificity misdiagnosis: the candidate causal factor cannot be determined perfectly in each individual
+    - serological studies that aim to investigate whether the presence of specific antibodies is associated to ME/CFS \citep{ruiz-pablos2021EpsteinBarrVirus} or whether these antibodies can be used for disease diagnosis \citep{sepulveda2022RevisitingIgG}
+

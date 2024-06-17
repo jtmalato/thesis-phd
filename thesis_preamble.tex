@@ -1,0 +1,178 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BT Charter font
+\usepackage[T1]{fontenc}
+\usepackage[bitstream-charter]{mathdesign}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% captions with labels in bold and small font
+\usepackage[font=small,labelfont=bf]{caption}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% force white space to the bottom
+\raggedbottom
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% footnotes
+\makeatletter
+\newcommand\footnoteref[1]{\protected@xdef\@thefnmark{\ref{#1}}\@footnotemark}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\usepackage{etoolbox}
+\pagestyle{fancy}
+
+% plain page style
+\fancypagestyle{plain}{%
+    \fancyhf{}%
+    \lfoot{}%
+    \rfoot{}%
+    \cfoot{}%
+    % \fancyhead[LO,RE]{\usefont{T1}{bch}{m}{n}\selectfont\small\thepage}%
+    % \fancyhead[LE,RO]{\usefont{T1}{bch}{m}{n}\selectfont\small\nouppercase{{\leftmark}}}%
+    \fancyhead[LE,RO]{\usefont{T1}{bch}{m}{n}\selectfont\small\thepage}%
+    \fancyhead[LO,RE]{\usefont{T1}{bch}{m}{n}\selectfont\small\nouppercase{{\leftmark}}}%
+    \renewcommand{\headrulewidth}{1pt}
+}
+
+% main page style
+\fancypagestyle{main}{%
+    \fancyhf{}%
+    \lfoot{}%
+    \rfoot{}%
+    \cfoot{}%
+    \fancyhead[LO,RE]{\usefont{T1}{bch}{m}{n}\selectfont\small\thepage}%
+    \fancyhead[RO]{\usefont{T1}{bch}{m}{n}\selectfont\small\nouppercase{{\leftmark}}}%
+    \fancyhead[LE]{\usefont{T1}{bch}{m}{n}\selectfont\small\nouppercase{{\rightmark}}}%
+    \renewcommand{\headrulewidth}{1pt}
+}
+\appto\frontmatter{\pagestyle{plain}}
+\appto\mainmatter{\pagestyle{main}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{titlesec}
+% Chapter font
+\usepackage{sectsty}
+\partfont{\usefont{T1}{qhv}{b}{n}\selectfont\Huge}
+\chapterfont{\usefont{T1}{qhv}{b}{n}\selectfont\huge}
+\sectionfont{\usefont{T1}{qhv}{b}{n}\selectfont\Large}
+\subsectionfont{\usefont{T1}{qhv}{b}{n}\selectfont}
+\subsubsectionfont{\usefont{T1}{qhv}{b}{n}\selectfont}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% format part pages
+% \titleformat{<command>}[<shape*>]{<format>}{<label>}{<sep>}{<before-code>}[<after-code*>]
+% * optional
+\titleformat{\part}[display]{\usefont{T1}{qhv}{b}{n}\selectfont\centering\LARGE}
+    {\partname\ \thepart}
+    {10pt}
+    {\Huge}
+% \titlespacing*{\part}{0pt}{30pt}{20pt}
+% \titlespacing*{<command>}{<left>}{<before-sep>}{<after-sep>}
+% '*' kills the indentation of paragraph following title
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Change name of lists of tables and figures (no caps)
+\renewcommand{\listtablename}{List of tables}
+\renewcommand{\listfigurename}{List of figures}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% format chapters
+% Space from the top of the text block to the word Chapter; default is 50pt.
+% Space between Chapter and the chapter title; default is 20pt.
+% Space between the chapter title and the chapter body text; default is 40pt.
+% format chapters
+\titleformat{\chapter}[display]{
+    \usefont{T1}{qhv}{b}{n}\selectfont\Large\bfseries}
+    {\chaptertitlename\ \thechapter}
+    % {\rule[-1em]{\textwidth}{0.6mm}\hspace*{-\textwidth}}
+    {1pt}
+    {\LARGE}
+\titlespacing*{\chapter}{0pt}{0pt}{40pt}
+% \titlespacing*{\section}{0pt}{12pt plus 4pt minus 2pt}{2pt plus 2pt minus 2pt}
+% \titlespacing*{\subsection}{0pt}{12pt plus 4pt minus 2pt}{2pt plus 2pt minus 2pt}
+% \titlespacing*{\subsubsection}{0pt}{12pt plus 4pt minus 2pt}{2pt plus 2pt minus 2pt}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% edit table of contents
+\usepackage[subfigure]{tocloft} % subfigure option only if using subfigure package
+\renewcommand{\cftlottitlefont}{\usefont{T1}{qhv}{b}{n}\selectfont\huge} % lot title
+\renewcommand{\cftloftitlefont}{\usefont{T1}{qhv}{b}{n}\selectfont\huge} % lof title
+
+\renewcommand{\cfttoctitlefont}{\usefont{T1}{qhv}{b}{n}\selectfont\huge} % toc title
+\renewcommand{\cftpartfont} % part titles
+             {\usefont{T1}{qhv}{b}{n}\selectfont}
+\renewcommand{\cftchapfont} % chapter titles
+             {\usefont{T1}{qhv}{b}{n}\selectfont}
+\renewcommand{\cftsecfont} % section titles
+             {\usefont{T1}{bch}{m}{n}\selectfont}
+\renewcommand{\cftsubsecfont} % subsection titles
+             {\usefont{T1}{bch}{m}{n}\selectfont} 
+
+\renewcommand{\cftpartpagefont} % part page numbers
+             {\usefont{T1}{bch}{b}{n}\selectfont}
+\renewcommand{\cftchappagefont} % chapter page numbers
+             {\usefont{T1}{bch}{b}{n}\selectfont}
+\renewcommand{\cftsecpagefont} % section page numbers
+             {\cftsecfont} 
+\renewcommand{\cftsubsecpagefont} % subsection page numbers
+             {\cftsubsecfont}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Keywords
+\def\keywordname{\textbf{\textit{Keywords}:}}%
+\providecommand{\keywords}[1]{\par\noindent\keywordname\enspace\ignorespaces#1}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Abstract
+% \renewcommand{\abstractname}{Abstract}
+% \def\abstractname{\subsubsection*{\abstractname}}%
+% \renewenvironment{abstract}{
+%     \small
+%     \begin{center}
+%     \bfseries\abstractname\vspace{-0.5em}\vspace{0pt}
+%     \end{center}
+%     \list{}{
+%         \setlength{\leftmargin}{.5cm}%
+%         \setlength{\rightmargin}{\leftmargin}%
+%     }%
+%     \item\relax
+% }
+% {\endlist}
+% \renewenvironment{abstract}{
+%     \begin{center}
+%     \subsubsection*{\abstractname}\vspace{-1.5em}
+%     \end{center}
+%     \list{}{
+%         \normalsize
+%         \setstretch{1}
+%         \setlength{\leftmargin}{0.5cm}%
+%         \setlength{\rightmargin}{\leftmargin}
+%     }
+%     \item\relax
+% }
+% {\endlist}
+
+\newcommand\blankpage{%
+    \null
+    \thispagestyle{empty}%
+    \addtocounter{page}{1}%
+    \newpage}
+
+\newcommand{\abstractname}{Abstract}
+\newenvironment{abstract}{
+    \begin{center}
+    \subsubsection*{\abstractname}\vspace{-1.5em}
+    \end{center}
+    \list{}{
+        \normalsize
+        \setstretch{1}
+        \setlength{\leftmargin}{0.5cm}%
+        \setlength{\rightmargin}{\leftmargin}
+    }
+    \item\relax
+}
+{\endlist}
+
+\newcommand{\note}[1]{\textcolor{teal}{[#1]}}
+\newcommand{\red}[1]{\textcolor{red}{#1}}
+
+\newcommand{\bsni}{\bigskip\noindent}
+
+\newcommand{\covid}{Covid-19\xspace}
+\newcommand{\sars}{SARS-CoV-2\xspace}
+\newcommand{\LC}{Long Covid\xspace}
+\newcommand{\cfs}{ME/CFS\xspace}
+\newcommand{\cdfour}{CD4\textsuperscript{+}\xspace}
+\newcommand{\cdeight}{CD8\textsuperscript{+}\xspace}
+\newcommand{\treg}{T${_\text{reg}}$\xspace}

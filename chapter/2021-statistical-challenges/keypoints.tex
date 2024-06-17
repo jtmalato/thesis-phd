@@ -1,0 +1,80 @@
+\section{Introduction}
+
+- prevalence: 0.4--1.0\%
+- female-male ratio: 6:1
+- >20 different case definitions based on symptoms
+- possible false positive patients can affect research on ME/CFS
+- UKMEB
+
+
+\section{UKMEB}
+
+- Biobank description
+- 523 Participants
+    - 275 ME/CFS
+    - 136 HC
+    - 112 MS
+
+
+\section{Diagnostic agreement analysis}
+
+- Description of 4 most commonly used ME/CFS case definitions:
+    - CDC-1994
+    - CCC-2003
+    - ICC-2011
+    - IOM-2015
+
+- Table 1: Frequency of suspected cases of ME/CFS according to their diagnostic outcomes using different case definitions
+    - exploratory analysis on agreement
+
+- Table 2: Estimates of the Jaccard's similarity index for the four case definitions of ME/CFS
+    - Jaccard similarity index
+    - J range = 0.752--0.876
+
+
+\section{Symptoms’ similarity analysis}
+
+- Figure 1: Symptom's similarity analysis based on the Cohen's kappa coefficient
+    - A: MDS
+    - B: hierarchical cluster analysis
+
+
+\section{Impact of misclassification on an association analysis}
+
+Assumptions:
+    1. suspected cases could be divided into apparent (or false positive) cases and true positive cases of ME/CFS
+    2. the apparent cases were deemed equivalent to healthy controls in terms of degree of exposure, i.e., the probability of exposure in these individuals was given by $\theta_0$
+    3. there was an overall misclassification rate, $\gamma$, for the suspected cases
+    4. misclassification was only dependent on the true clinical status of each suspected case. 
+
+Table 3: Augmented version of the observable 2x2 frequency table and probabilities for healthy controls and suspected cases
+
+Figure 2: Estimated probability of rejecting H0 as function of the misclassification rate
+
+
+\section{Concluding remarks}
+
+
+\section{CONCLUSIONS}
+
+1. Diagnostic agreement
+    - Jaccard index: even if the general practitioners applied two different case definitions of ME/CFS in their diagnosis, there could still be a fraction of suspected cases where the respective diagnostic outcomes might not agree with each other.
+
+2. Symptoms' similarity
+    - Patient symptoms are very heterogeneous
+    - Patient symptoms overlap with other similar diseases, and even in some extreme cases, healthy controls (Fig 1B)
+    - Some ME/CFS diagnosed patients could, in fact, be true cases of another disease \citep{nacul2019HowHave}
+    - Results demonstrated the difficulty of diagnosing ME/CFS based on symptoms' assessment alone
+        - To overcome this and other difficulties there are currently efforts for a stronger collaboration among European researchers for accelerating the discovery of an objective disease-specific biomarker \citep{scheibenbogen2017EuropeanME}
+
+3. Simulation study
+    - ME/CFS can be divided into different groups of true cases (true positives) and apparent cases (false positives)
+    - 
+
+- Before going into biomarker discovery: biomarker discovery is very likely to suffer from limited statistical power due to a possible misclassification of the suspected cases
+    - a possible solution is to take misclassification into account in the respective analysis
+    - this approximation towards reality could in turn become a problem of overparameterization, which could be avoided by
+        1. frequentist way: fixing misclassification rate in a reasonable estimate for the sensitivity of the diagnosis test
+        2. Bayesian way: prior information about misclassification rate takes the form of a probability distribution
+        - both approaches show a limitation: lack of biomarker for ME/CFS = unclear what's the reasonable value for the probability distribution to choose for the sensitivity of current diagnostic tools
+    

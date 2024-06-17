@@ -1,0 +1,13 @@
+\begin{tabular}{lcccc} 
+\toprule
+\multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}Observed \\test outcome\end{tabular}} & \multirow{2}{*}{\begin{tabular}[c]{@{}c@{}}True exposure \\indicator\end{tabular}} & \multirow{2}{*}{Controls}  & \multicolumn{2}{c}{Suspected cases} \\ 
+\cline{4-5}
+                                                                                 &                &                            & (Apparent)                       & (True)                                \\ 
+\hline
+\multirow{2}{*}{Seropositive}                                                    & $E$            & $\pi_{se}\theta_0$         & $\pi_{se}\gamma\theta_0$         & $\pi_{se}(1-\gamma)\theta_1^*$        \\
+                                                                                 & $\overline{E}$ & $(1-\pi_{sp})(1-\theta_0)$ & $(1-\pi_{sp})\gamma(1-\theta_0)$ & $(1-\pi_{sp})(1-\gamma)(1-\theta_1^*)$ \\
+\cmidrule{2-5}
+\multirow{2}{*}{Seronegative}                                                    & $E$            & $(1-\pi_{se})\theta_0$     & $(1-\pi_{se})\gamma\theta_0$     & $(1-\pi_{se})(1-\gamma)\theta_1^*$    \\
+                                                                                 & $\overline{E}$ & $\pi_{sp}(1-\theta_0)$     & $\pi_{sp}\gamma(1-\theta_0)$     & $\pi_{sp}(1-\gamma)(1-\theta_1^*)$    \\
+\bottomrule
+\end{tabular}

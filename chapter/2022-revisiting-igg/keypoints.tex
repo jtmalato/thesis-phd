@@ -1,0 +1,126 @@
+- Reanalysis of microarray data on IgG antibody responses agains 3054 EBV-related antigens
+- 92 ME/CFS patients
+- 50 HC
+
+- construct different regression models for binary outcomes with the ability to classify patients and HC
+    - tested possible interactions of different Abs with age and gender
+
+No Ab responses to distinguish patients from HC
+    - whole data
+    - HC vs non-infectious/unknown ME/CFS
+Abs responses
+    - HC vs infectious ME/CFS
+    - found: EBNA4\_0529 and EBNA6\_0070
+    - SE = 0.833
+    - SP = 0.720
+
+- To confirm this finding a follow-up study to be conducted in a separate cohort of patients
+
+\section{Introduction}
+
+\textbf{Objective: optimise biomarker discovery}
+    - split patients by infection trigger to 
+    - we compared patients with or without an infectious trigger at disease onset to healthy controls in order to discover EBV-derived antigens whose antibody responses could be used for ME/CFS diagnosis
+
+\section{Materials and methods}
+\subsection{Study participants}
+
+- Matched individuals
+
+Table 1: Basic characteristics of ME/CFS patients and healthy controls
+
+
+\subsection{Peptide array}
+
+1. Multivariate analysis
+    a. PCA
+    b. correlation matrices (Spearma's correaltion coef)
+2. Linear discriminant analysis
+    - determine best  linear combination of all the Abs responses that distinguish ME/CFS and subgroups from the healthy individuals
+- outcome of LDA = estimated classification probability of each individual
+3. Estimate ROC curve and AUC
+
+4. Ab-wide association analyses comparing
+    1. HC vs ME/CFS all
+    2. HC vs ME/CFS inf
+    3. HC vs ME/CFS noninf
+    4. NE/CFS inf vs ME/CFS noninf
+- GLM (logistic, probit, cloglog)
+    - y: disease status
+    - b1: age
+    - b2: gender
+- AIC to select the best fitted model
+- ROC and AUC
+
+
+\section{Results}
+\subsection{PCA and LDA}
+
+Figure 1: Preliminary multivariate analysis of the data
+    - PCA shows nothing
+
+
+\subsection{Ab-wise association analysis}
+
+Figure 2: Antibody-wide association analyses when comparing ME/CFS to healthy controls
+
+
+\subsection{Analysis of candidate antigens for classifying ME/CFS patients with infectious trigger}
+
+Figure 3: Statistical analysis of the antibody levels related to EBNA4\_0529, EBNA6\_0066, and EBNA6\_0070
+
+Table 2: Estimates of the final complementary log-log model to discriminate ME/CFS patients with an infectious disease trigger from healthy controls
+    - final model: EBNA4\_0529 and EBNA6\_0070 and interaction of age and gender
+
+Figure 4: Analysis of the final classification model for predicting ME/CFS patients with an infectious trigger when compared to healthy controls
+
+\section{Discussion}
+
+OBJECTIVE:
+    - Discover EBV-derived antigens that could elicit distinct Ab responses in ME/CFS patients when compared to healthy controls
+KEY FINDING:
+    - identification of 2 candidate antigens inducing increased Ab responses in ME/CFS patients with an infectious trigger
+    - high SE and SP, which suggests their potential for diagnosis of this subgroup of affected individuals
+    - No results for noninf ME/CFS
+    - results in agreement with serological investigation of different herpesviruses in ME/CFS \citep{blombergAntibodiesHumanHerpesviruses2019}
+    - EBV plays role in ME/CFS with inf trigger
+PROPOSED HYPOTHESIS FROM OUR FINDINGS:
+    - EBV reactivation which can occur during other infections may play until now an underestimated role in triggering ME/CFS
+    - \citet{su2022MultipleEarly} is in line with this concept. The study shows that EBV reactivation during Covid-19 is a risk factor for Long Covid which also includes ME/CFS
+    - alternatively, responses to EBNA6 peptides are due to a cross-reactivity to other pathogens
+
+CHALLENGES ASSOCIATED WITH DISCOVERY OF BIOMARKER
+    1. difficulty to identify disease-specific biomarker for ALL ME/CFS patients
+            - stratify patients adequately
+            - age, gender, disease trigger
+            - infection trigger findings \citep{domingues2021HerpesvirusesSerologya, steiner2020AutoimmunityRelatedRisk, szklarski2021DelineatingAssociationa}
+            - however this subgroup could be even further divided, as there is a vast number of infectious agents associated with ME/CFS \citep{blombergAntibodiesHumanHerpesviruses2019, rasa2018ChronicViral}
+                    - e.g., stratify based on the nature of causative effect
+    2. final classification model included non-trivial statistical interactions between candidate biomarkers and confounding factors
+            - presence of these interactions might be yet another contributing factor for the lack of reproducibility in ME/CFS biomarker studies
+                    - proposal: conduct more advanced statistical analyses 
+                    - ML methods \citep{gupta2021ArtificialIntelligence}
+    3. interaction between EBNA6\_0070 and gender implied distinct Ab signature between males and females
+            - in line with gender differences in immunity to viral infections \citep{jacobsen2021SexDifferences}
+                    - men have lower Ab responses when vaccinated and are more susceptible to infections than women \citep{aaby2020NonspecificSexdifferential}
+            - our study suggests that the higher probability of a younger man being ME/CFS patients is associated with lower levels of Abs against the antigen EBNA6\_0070
+            - women are at higher risk with higher Abs at older ages, suggesting that at least a subset develop these Abs responses later in life
+        - Different Ab profiling between male and female corroborate the idea that analysis on gender should be done in separate!
+            - studies on biomarker discovery should be designed with a more balanced gender ratio, to ensure comparable statistical power when analysing the data from each sex separately
+
+- BNA4\_0529 and EBNA6\_0070 are derived from proteins expressed during EBV type III latency
+    - Ab acquisition occurred during initial B-cell transformation and immortalization
+    - male and females that develop high Ab responses against antigen later in life are at increased risk of developing ME/CFS, this suggests that EBV plays a role!
+            - Males: lower EBNA6 Abs early in life = increased risk of developing ME/CFS
+
+    - These antibodies seem appropriate for diagnosis of putative patients with delayed disease diagnosis rather than early suspected cases (based on \citet{luisnacul2020HowMyalgic}
+
+- Ideas on possible antigen mimicry and autoimmune responses
+- Ideas on citrullination
+        -cross-reactivity between microbial and citrullinated human antigens can also be a trigering mechanism for autoimmune diseases
+- Ideas on process of generating new and more immunogenic epitopes from molecules upon oxidative and nitrosative stress
+
+CONCLUSION
+- This study identified two candidate antigens whose antibodies could be used to identify ME/CFS patients with an infectious trigger.
+- To strengthen our findings, two other cohorts of patients are currently studied, including the well-characterised ME/CFS patients with different disease triggers and healthy controls from the United Kingdom ME/CFS biobank \citep{domingues2021HerpesvirusesSerologya}.
+    

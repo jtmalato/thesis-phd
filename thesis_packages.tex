@@ -1,0 +1,116 @@
+% Note: Thank you to "Siarhei Khirevich's site" (https://www.khirevich.com/latex/), for providing invaluable comments and oppinions on how to set up the LaTeX structure for the present Thesis. Becoming obcessed with every single detail is, in itself, a form of procrastination. This website contained all the information required (and more) to feed my existential questions regarding fonts, page layout, and everything of the sorts.
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% language and text
+%\usepackage[portuguese]{babel}
+\usepackage[english]{babel}
+\usepackage[utf8]{inputenc} % document language
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% page structure
+\usepackage[a4paper]{geometry} % page margins
+\geometry{verbose,tmargin=2.5cm,bmargin=2.5cm,lmargin=3cm,rmargin=2.5cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% line spacing
+\usepackage{setspace} % space between lines
+\renewcommand{\baselinestretch}{1.5}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% % identation
+% \setlength{\parindent}{0.0in}
+% \setlength{\parskip}{0.1in}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% kerning text and word spacing
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+% activate={true,nocompatibility} - activate protrusion and expansion
+% final - enable microtype; use "draft" to disable
+% tracking=true, kerning=true, spacing=true - activate these techniques
+% factor=1100 - add 10% to the protrusion amount (default is 1000)
+% stretch=10, shrink=10 - reduce stretchability/shrinkability (default is 20/20)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[DIV=14,BCOR=2mm,headinclude=true,footinclude=false]{typearea}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% bibliography
+\usepackage[sectionbib]{natbib} % bibliography
+
+\usepackage{chapterbib} % for bibliography by chapter
+% \setcitestyle{numbers,square}
+\setcitestyle{authoryear,round,aysep={},yysep={;}}
+\setlength{\bibsep}{0.0pt}
+\def\bibfont{\footnotesize}
+\usepackage{notoccite} % prevent troubles from citations in toc, etc
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% multiple fontsizes (for the declaration page)
+\usepackage{anyfontsize}
+
+% Use Arial font as default
+% \renewcommand{\rmdefault}{phv}
+% \renewcommand{\sfdefault}{phv}
+
+% load babel package and options before erewhon
+% \usepackage[scaled=.98,space]{erewhon} % scaling by .98 not really necessary
+% \usepackage[varqu,varl]{inconsolata} % typewriter
+% \usepackage[type1,scaled=.95]{cabin} % sans serif like Gill Sans
+% \usepackage[utopia,vvarbb]{newtxmath}
+
+% \usepackage{indentfirst} % indentation of paragraph
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath}  % AMS mathematical facilities for LaTeX.
+% \usepackage{amsfonts} % 
+\usepackage{amsthm}   % Typesetting theorems (AMS style).
+% \usepackage{amssymb} % add tilde in numbers
+\usepackage{subfigure} % subcaptions for subfigures
+\usepackage{subfigmat} % layout for subfigures
+\usepackage{url} % url-sensitive line breaks
+
+\usepackage{dcolumn} % Align on the decimal point of numbers in tabular columns
+\newcolumntype{d}{D{.}{.}{-1}} % column aligned by the point separator '.'
+\newcolumntype{e}{D{E}{E}{-1}} % column aligned by the exponent 'E'
+
+\usepackage{tikz}
+\usepackage{rotating} % on tools, including rotated full-page floats
+\usepackage{hyperref} % Extensive support for hypertext in LaTeX
+\hypersetup{
+    % pdfTeX,
+    colorlinks=true,            % false: boxed links; true: colored links
+    linkcolor=black,              % color of internal links (change box color with linkbordercolor)
+    urlcolor=teal,              % color of external links
+    citecolor=gray,             % color of links to bibliography
+    filecolor=black,            % color of file links
+    menucolor=black,
+    % pagecolor=black,
+    bookmarks=true,             % show bookmarks bar
+    pdftoolbar=true,            % show Acrobat’s toolbar?
+    pdfmenubar=true,            % show Acrobat’s menu?
+    pdffitwindow=false,         % window fit to page when opened
+    pdfstartview={FitH},        % fits the width of the page to the window
+    pdftitle={Uncertainty and urgency: Tackling ME/CFS research and assessing the risk of SARS-CoV-2 Omicron subvariants in vaccinated populations},        % title
+    pdfauthor={João Malato},    % author
+    pdfsubject={PhD thesis},       % subject of the document
+    pdfcreator={João Malato},   % creator of the document
+    pdfproducer={João Malato},  % producer of the document
+    pdfkeywords={Myalgic encephalomyelitis/Chronic fatigue syndrome, Misdiagnosis, Patient stratification, SARS-CoV-2 Omicron, Hybrid immunity}, % list of keywords
+    pdfnewwindow=true           % links in new PDF window
+}
+\usepackage[nameinlink,noabbrev,capitalize]{cleveref}
+\usepackage[figure,table]{hypcap} % Adjusting the anchors of captions.
+\usepackage{algorithm} % The algorithmic style you always wanted
+\usepackage{algpseudocode}
+\usepackage{vcell}
+\usepackage{multirow} % Create tabular cells spanning multiple rows
+\usepackage{booktabs} % Publication quality tables in LaTeX
+\usepackage{diagbox} % diagonal lines to tables
+\usepackage{color}
+\usepackage{tabularray}
+\usepackage{tablefootnote}
+\usepackage{longtable}
+\usepackage{pdflscape}
+\usepackage{tabulary}
+% \usepackage{adjustbox} % to rotate tables 90 degrees
+\usepackage{pdfpages} % insert pdf files
+\usepackage{enumerate} % roman numerals in items
+\usepackage{ragged2e} % justify some text
+\usepackage[acronym,nomain,nonumberlist,nopostdot]{glossaries}
+\makeglossaries
+\renewcommand*{\glsgroupskip}{}
+\usepackage[hang,flushmargin,bottom]{footmisc} % remove footnote indentation
+\usepackage{xspace} % newcommands

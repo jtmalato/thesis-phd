@@ -1,0 +1,23 @@
+\begin{tblr}{
+ column{1} = {l},
+ column{2-4} = {c},
+ hline{1,17} = {-}{0.08em},
+ hline{2} = {-}{0.05em},
+}
+Analysis/Comparison & Model (link function) & AIC & ROC (95\% CI) \\
+$\text{ME/CFS}_\text{all}$ vs. $\text{Healthy controls}$ & Logit & 189.973 & 0.577 (0.478, 0.676) \\
+ & Probit & 189.964 & 0.576 (0.478, 0.675) \\
+ & \textbf{Clog-log} & \textbf{189.936} & \textbf{0.574 (0.475, 0.672)} \\
+ & & & \\
+$\text{ME/CFS}_\text{inf}$ vs. $\text{Healthy controls}$ & Logit & 147.055 & 0.610 (0.500, 0.719) \\
+ & \textbf{Probit} & \textbf{147.029} & \textbf{0.606 (0.496, 0.715)} \\
+ & Clog-log & 147.220 & 0.609 (0.499, 0.718) \\
+ & & & \\
+$\text{ME/CFS}_\text{noinf}$ vs. $\text{Healthy controls}$ & Logit & 127.619 & 0.556 (0.429, 0.683) \\
+ & Probit & 127.629 & 0.559 (0.432, 0.687) \\
+ & \textbf{Clog-log} & \textbf{127.547} & \textbf{0.556 (0.429, 0.683)} \\
+ & & & \\
+$\text{ME/CFS}_\text{inf}$ vs. $\text{ME/CFS}_\text{noinf}$ & \textbf{Logit} & \textbf{129.205} & \textbf{0.596 (0.471, 0.720)} \\
+ & Probit & 129.236 & 0.597 (0.472, 0.721) \\
+ & Clog-log & 129.529 & 0.596 (0.472, 0.721)
+\end{tblr}
