@@ -14,6 +14,8 @@ This thesis was defended on May 10th, 2024.
 
 ## Publications included in the thesis
 
+By descending chronological order:
+
 <table>
   <tr>
   <td>
